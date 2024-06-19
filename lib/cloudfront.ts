@@ -44,6 +44,7 @@ export class CloudfrontDemoStack extends cdk.Stack {
     // Web hosting bucket
     let websiteBucket = new Bucket(this, "websiteBucket", {
       versioned: false,
+      autoDeleteObjects: true,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
